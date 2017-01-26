@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Verify</title>
+  </head>
+  <body>
+    <h6>
+    Are you sure you want to delete the following course?</h6>
+<label for="course">Name: </label>
+{{course.course_name}}
+<label for="description">Description: </label>
+{{course.description}}
+<form action='/' method="get">
+  <input type="submit" value="No">
+  </form>
+<form action='/deleteForRealz/{{course.id}}' method="get">
+  <input type="submit" value="Yes">
+</form>
+
+
+  </body>
+</html>
